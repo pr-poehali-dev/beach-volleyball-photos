@@ -2,6 +2,8 @@ import React from 'react';
 import Icon from '@/components/ui/icon';
 
 const Footer: React.FC = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="bg-blue-900 text-white py-10">
       <div className="container mx-auto px-4">
@@ -25,10 +27,6 @@ const Footer: React.FC = () => {
                 <span className="sr-only">Facebook</span>
               </a>
               <a href="#" className="text-white hover:text-blue-300">
-                <Icon name="Twitter" size={24} />
-                <span className="sr-only">Twitter</span>
-              </a>
-              <a href="#" className="text-white hover:text-blue-300">
                 <Icon name="Telegram" size={24} />
                 <span className="sr-only">Telegram</span>
               </a>
@@ -38,11 +36,10 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">Карта сайта</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-blue-200 hover:text-white">Главная</a></li>
+              <li><a href="/" className="text-blue-200 hover:text-white">Главная gazeta-delovoi.ru</a></li>
               <li><a href="#about" className="text-blue-200 hover:text-white">О нас</a></li>
               <li><a href="#upload" className="text-blue-200 hover:text-white">Загрузить фото</a></li>
               <li><a href="#gallery" className="text-blue-200 hover:text-white">Галерея</a></li>
-              <li><a href="#" className="text-blue-200 hover:text-white">Контакты</a></li>
             </ul>
           </div>
           
@@ -59,14 +56,14 @@ const Footer: React.FC = () => {
               </li>
               <li className="flex items-center">
                 <Icon name="Mail" className="mr-2" size={18} />
-                <span>volleyball@eisk-beach.ru</span>
+                <span>volleyball@gazeta-delovoi.ru</span>
               </li>
             </ul>
           </div>
         </div>
         
         <div className="mt-8 pt-8 border-t border-blue-800 text-center text-blue-300">
-          <p>&copy; {new Date().getFullYear()} Волейбол в Ейске. Все права защищены.</p>
+          <p>&copy; {currentYear} Волейбол в Ейске | <a href="https://gazeta-delovoi.ru" className="hover:text-white">Деловой Ейск</a></p>
         </div>
       </div>
     </footer>
